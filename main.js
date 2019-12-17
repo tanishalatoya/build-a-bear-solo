@@ -12,11 +12,13 @@ function instantiateOufits() {
   //Parse items back into objects --> JSON.Parse --> This should return an array of uninstantiated objects
   var parsedRetrievedOutfits = JSON.parse(retrievedOutfits);
   //Loop over the objects within the array to reinstantiate each property of the outfit object as an instance
-  for (var i = 0; i < parsedRetrievedOutfits.length; i++) {
-    //the code that creates the cards go here.
+  if (localStorage) {
+    for (var i = 0; i < parsedRetrievedOutfits.length; i++) {
+      var outfit = new Outfit(parsedRetrievedOutfits[i].title, parsedRetrievedOutfits[i].background, parsedRetrievedOutfits[i].id);
+    }
   }
   //Push reinstantiated outfit back into the allGarment array
-  allGarments.push()
+  allGarments.push(outfit)
 }
 
 function saveOutfit() {
