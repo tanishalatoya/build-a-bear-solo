@@ -10,6 +10,7 @@ function saveOutfit() {
   backgroundChoice = localStorage.getItem('background');
   uniqueID = generateUniqueID();
   var outfit = new Outfit(outfitNameInput.value, backgroundChoice, uniqueID)
+  localStorage.removeItem('background');
   console.log(outfit);
 }
 
