@@ -12,3 +12,7 @@ function saveOutfit() {
   var outfit = new Outfit(outfitNameInput.value, backgroundChoice, uniqueID)
 
 }
+
+function generateUniqueID() {
+  return Math.floor(Math.random() * 10);
+}
