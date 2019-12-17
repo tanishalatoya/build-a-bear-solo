@@ -1,6 +1,6 @@
 var saveButton = document.querySelector('#save-button');
 var backgroundButtons = document.querySelector('.backgrounds');
-var allGarments = [];
+var allGarments;
 
 window.addEventListener('load', instantiateOufits);
 saveButton.addEventListener('click', saveOutfit);
