@@ -8,7 +8,7 @@ backgroundButtons.addEventListener('click', assignBackgroundChoice)
 
 function instantiateOufits() {
   //Get outfits from local localStorage --> localStorage.getItem --> should return an array of string elements
-  var retrievedOutfits = localStorage('savedOutfits');
+  var retrievedOutfits = localStorage.getItem('savedOutfits');
   //Parse items back into objects --> JSON.Parse --> This should return an array of uninstantiated objects
   var parsedRetrievedOutfits = JSON.parse(retrievedOutfits);
   //Loop over the objects within the array to reinstantiate each property of the outfit object as an instance
