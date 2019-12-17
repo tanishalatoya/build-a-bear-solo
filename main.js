@@ -9,14 +9,12 @@ function saveOutfit() {
   var outfitNameInput = document.querySelector('input');
   backgroundChoice = localStorage.getItem('background');
   uniqueID = generateUniqueID();
-  //Needs to instantiate on page load --> see spec
   var outfit = new Outfit(outfitNameInput.value, backgroundChoice, uniqueID)
   console.log(outfit);
 }
 
-//Work on making this more dynamic to generate a truly unique number.
 function generateUniqueID() {
-  return Math.floor(Math.random() * 10);
+  return Math.random().toString(36).substr(2, 9);
 }
 
 function assignBackgroundChoice() {
