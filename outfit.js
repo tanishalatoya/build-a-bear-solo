@@ -5,4 +5,8 @@ class Outfit {
     this.id = id || undefined;
     this.garments = [];
   }
+
+  addGarment(attire) {
+    this.garments.push(attire);
+  }
 }
