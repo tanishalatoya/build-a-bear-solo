@@ -1,20 +1,20 @@
 var saveButton = document.querySelector('#save-button');
 var backgroundButtons = document.querySelector('.backgrounds');
+var allGarments = [];
 
 saveButton.addEventListener('click', saveOutfit);
 backgroundButtons.addEventListener('click', assignBackgroundChoice)
 
 function saveOutfit() {
   var outfitNameInput = document.querySelector('input');
-  //Target the background and have the assigned value appear here
   backgroundChoice = localStorage.getItem('background');
-  //Use a uniqueID generator and target that
   uniqueID = generateUniqueID();
-  //Instantiate a new outfit
+  //Needs to instantiate on page load --> see spec
   var outfit = new Outfit(outfitNameInput.value, backgroundChoice, uniqueID)
   console.log(outfit);
 }
 
+//Work on making this more dynamic to generate a truly unique number.
 function generateUniqueID() {
   return Math.floor(Math.random() * 10);
 }
